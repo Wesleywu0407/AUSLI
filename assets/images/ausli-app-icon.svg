@@ -1,0 +1,56 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGlow" x1="164" y1="132" x2="842" y2="878" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101114"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <radialGradient id="orbFill" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(430 378) rotate(44.5) scale(404.251)">
+      <stop stop-color="#F3F7FC" stop-opacity="0.95"/>
+      <stop offset="0.28" stop-color="#B8C0CC" stop-opacity="0.9"/>
+      <stop offset="0.7" stop-color="#6B7380" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#232831"/>
+    </radialGradient>
+    <radialGradient id="innerGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(552 530) rotate(120.2) scale(168.32)">
+      <stop stop-color="#BFD4EE" stop-opacity="0.72"/>
+      <stop offset="0.45" stop-color="#7E94B2" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#7E94B2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="presence" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(612 468) rotate(90) scale(56)">
+      <stop stop-color="#F3F8FF"/>
+      <stop offset="0.34" stop-color="#BBD0EA" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#BBD0EA" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur" x="84" y="84" width="856" height="856" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="28" result="effect1_foregroundBlur_0_1"/>
+    </filter>
+    <filter id="haloBlur" x="162" y="162" width="700" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_0_1"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="236" fill="url(#bgGlow)"/>
+  <circle cx="512" cy="512" r="298" fill="#0A0B0D"/>
+
+  <g filter="url(#softBlur)" opacity="0.35">
+    <circle cx="526" cy="532" r="226" fill="#8DA8CE"/>
+  </g>
+
+  <g filter="url(#haloBlur)" opacity="0.9">
+    <ellipse cx="512" cy="512" rx="254" ry="252" stroke="#D9E1EC" stroke-opacity="0.11" stroke-width="8"/>
+    <ellipse cx="512" cy="512" rx="286" ry="182" transform="rotate(-18 512 512)" stroke="#C8D3E1" stroke-opacity="0.13" stroke-width="5"/>
+  </g>
+
+  <path d="M514.172 258C651.587 258 764 371.74 764 512.146C764 653.578 652.13 766 514.172 766C373.979 766 261 653.72 261 512.146C261 371.597 374.521 258 514.172 258Z" fill="url(#orbFill)"/>
+  <path d="M514.172 258C651.587 258 764 371.74 764 512.146C764 653.578 652.13 766 514.172 766C373.979 766 261 653.72 261 512.146C261 371.597 374.521 258 514.172 258Z" fill="url(#innerGlow)"/>
+
+  <path d="M372 384C422.299 336.732 487.873 310 560.682 310C624.828 310 682.758 331.293 728.202 371.226C682.505 335.659 621.019 315 554.666 315C481.482 315 416.277 340.167 372 384Z" fill="#FAFCFF" fill-opacity="0.32"/>
+  <path d="M363 622C403.843 675.5 471.602 710 548.01 710C620.358 710 684.943 679.049 727 628.998C680.468 666.749 618.934 689.408 552.073 689.408C476.679 689.408 408.067 660.632 363 622Z" fill="#1A1F27" fill-opacity="0.58"/>
+
+  <circle cx="612" cy="468" r="34" fill="url(#presence)"/>
+
+  <path d="M410 702L510 316L546 316L647 702L597 702L573 607L484 607L460 702L410 702ZM498 556H559L528 420L498 556Z" fill="#F5F5F5" fill-opacity="0.08"/>
+</svg>

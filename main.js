@@ -16,6 +16,17 @@ const featureButtons = [...document.querySelectorAll("[data-open-product]")];
 const cursor = document.querySelector(".cursor");
 const interactiveElements = document.querySelectorAll("a, button, .product-card");
 const revealSections = [...document.querySelectorAll(".reveal-section")];
+const aiOrb = document.getElementById("ai-orb");
+const aiOrbShell = document.querySelector(".ai-orb-shell");
+const aiOrbBody = document.querySelector(".ai-orb-body");
+const aiOrbEnergy = document.querySelector(".ai-orb-energy");
+const aiOrbPresence = document.querySelector(".ai-orb-presence");
+const aiOrbRipples = [...document.querySelectorAll(".ai-orb-ripple")];
+const curatorPanel = document.getElementById("curator-panel");
+const curatorClose = document.getElementById("curator-close");
+const curatorInput = document.getElementById("curator-input");
+const curatorResponse = document.getElementById("curator-response");
+const curatorChips = [...document.querySelectorAll(".curator-chip")];
 
 let activeCard = null;
 const heroState = {
@@ -440,6 +451,184 @@ function initCursor() {
   tick();
 }
 
+function initCurator() {
+  if (!aiOrb || !curatorPanel) {
+    return;
+  }
+
+  const orbState = {
+    pointerX: window.innerWidth * 0.78,
+    pointerY: window.innerHeight * 0.82,
+    near: false,
+    clickPulse: 0
+  };
+
+  function openPanel() {
+    curatorPanel.classList.add("is-open");
+    curatorPanel.setAttribute("aria-hidden", "false");
+    document.body.classList.add("curator-open");
+    aiOrb.classList.add("is-open");
+
+    if (window.gsap) {
+      gsap.fromTo(
+        ".curator-panel-inner",
+        { x: 24, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.7, ease: "power3.out" }
+      );
+    }
+
+    setTimeout(() => curatorInput?.focus(), 220);
+  }
+
+  function closePanel() {
+    curatorPanel.classList.remove("is-open");
+    curatorPanel.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("curator-open");
+    aiOrb.classList.remove("is-open");
+  }
+
+  function setResponse(text) {
+    if (!curatorResponse) {
+      return;
+    }
+
+    curatorResponse.innerHTML = `<p>${text}</p>`;
+  }
+
+  const curatedResponses = {
+    "Show me silver objects":
+      "A cooler edit: Slate Frame Bag, Glass Heel, and the sculptural silver hero object language. Look for cleaner surfaces, metallic restraint, and sharper silhouette contrast.",
+    "I want something minimal":
+      "The quietest line sits in Noir Drape Coat, Veil Column Dress, and Static Trousers. These pieces stay close to line, proportion, and softened monochrome texture.",
+    "Find a statement piece":
+      "For a stronger presence, start with Noir Drape Coat or Slate Frame Bag. Each holds shape with more attitude while keeping the palette controlled and editorial."
+  };
+
+  aiOrb.addEventListener("click", () => {
+    if (window.gsap) {
+      gsap.fromTo(
+        orbState,
+        { clickPulse: 0 },
+        { clickPulse: 1, duration: 0.24, yoyo: true, repeat: 1, ease: "power2.out" }
+      );
+    }
+    openPanel();
+  });
+
+  curatorClose?.addEventListener("click", closePanel);
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && curatorPanel.classList.contains("is-open")) {
+      closePanel();
+    }
+  });
+
+  curatorChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      if (curatorInput) {
+        curatorInput.value = chip.textContent.trim();
+      }
+      setResponse(curatedResponses[chip.textContent.trim()] || "A restrained edit is ready.");
+    });
+  });
+
+  curatorInput?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    const value = curatorInput.value.trim();
+    if (!value) {
+      return;
+    }
+
+    const lower = value.toLowerCase();
+    if (lower.includes("silver")) {
+      setResponse(curatedResponses["Show me silver objects"]);
+    } else if (lower.includes("minimal")) {
+      setResponse(curatedResponses["I want something minimal"]);
+    } else if (lower.includes("statement")) {
+      setResponse(curatedResponses["Find a statement piece"]);
+    } else {
+      setResponse(
+        "The curator suggests beginning with the pieces that hold the cleanest silhouette and strongest material contrast, then narrowing by mood, texture, or object scale."
+      );
+    }
+  });
+
+  window.addEventListener("pointermove", (event) => {
+    orbState.pointerX = event.clientX;
+    orbState.pointerY = event.clientY;
+
+    const rect = aiOrb.getBoundingClientRect();
+    const orbX = rect.left + rect.width / 2;
+    const orbY = rect.top + rect.height / 2;
+    const distance = Math.hypot(event.clientX - orbX, event.clientY - orbY);
+    const isNear = distance < 160;
+
+    if (isNear !== orbState.near) {
+      orbState.near = isNear;
+      aiOrb.classList.toggle("is-near", isNear);
+    }
+  });
+
+  let t = 0;
+  const proximity = { value: 0, target: 0 };
+  const awareness = { x: 0, y: 0 };
+
+  function animateOrb() {
+    t += 0.016;
+    proximity.target = orbState.near || curatorPanel.classList.contains("is-open") ? 1 : 0;
+    proximity.value += (proximity.target - proximity.value) * 0.04;
+
+    const breath = 1 + Math.sin(t * 1.1) * (0.015 + proximity.value * 0.012) + orbState.clickPulse * 0.035;
+    const floatY = Math.sin(t * 0.72) * (5 + proximity.value * 1.5);
+    const shellRotate = t * 4.4;
+    const bodyRotate = t * 7.5;
+    const energyDriftX = Math.sin(t * 0.62) * 2.2 + Math.cos(t * 0.31) * 1.2;
+    const energyDriftY = Math.cos(t * 0.54) * 1.8;
+    const coreDriftX = Math.sin(t * 0.9) * 2.2;
+    const coreDriftY = Math.cos(t * 0.76) * 1.8;
+
+    const rect = aiOrb.getBoundingClientRect();
+    const orbX = rect.left + rect.width / 2;
+    const orbY = rect.top + rect.height / 2;
+    const targetAwareX = clamp((orbState.pointerX - orbX) / 120, -1, 1);
+    const targetAwareY = clamp((orbState.pointerY - orbY) / 120, -1, 1);
+    awareness.x += (targetAwareX - awareness.x) * 0.025;
+    awareness.y += (targetAwareY - awareness.y) * 0.025;
+
+    aiOrb.style.transform = `translate3d(0, ${floatY}px, 0) scale(${breath})`;
+
+    if (aiOrbShell) {
+      aiOrbShell.style.transform = `rotate(${shellRotate}deg) scale(${1 + proximity.value * 0.02})`;
+      aiOrbShell.style.opacity = `${0.62 + proximity.value * 0.08}`;
+    }
+
+    if (aiOrbBody) {
+      aiOrbBody.style.transform = `rotate(${bodyRotate}deg) scale(${1 + proximity.value * 0.018})`;
+    }
+
+    if (aiOrbEnergy) {
+      aiOrbEnergy.style.transform = `translate(${energyDriftX + awareness.x * 2.4}px, ${energyDriftY + awareness.y * 2}px) scale(${1 + proximity.value * 0.04})`;
+      aiOrbEnergy.style.opacity = `${0.82 + proximity.value * 0.12}`;
+    }
+
+    if (aiOrbPresence) {
+      aiOrbPresence.style.transform = `translate(${coreDriftX + awareness.x * 3.6}px, ${coreDriftY + awareness.y * 3}px) scale(${1 + proximity.value * 0.12})`;
+      aiOrbPresence.style.opacity = `${0.72 + proximity.value * 0.16}`;
+    }
+
+    aiOrbRipples.forEach((ripple, index) => {
+      ripple.style.opacity = `${0.02 + proximity.value * (0.025 + index * 0.01)}`;
+    });
+
+    requestAnimationFrame(animateOrb);
+  }
+
+  animateOrb();
+}
+
 function initAnimations() {
   if (!window.gsap) {
     revealSections.forEach((section) => section.classList.add("is-visible"));
@@ -501,6 +690,7 @@ function initAnimations() {
 initHeroScene();
 initOverlay();
 initCursor();
+initCurator();
 initAnimations();
 updateHeroScroll();
 

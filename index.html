@@ -8,6 +8,7 @@
     name="description"
     content="A U S L I is a minimalist fashion destination curated by instinct."
   >
+  <link rel="icon" type="image/svg+xml" href="assets/images/ausli-app-icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -19,6 +20,15 @@
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor" aria-hidden="true"></div>
+  <button class="ai-orb" id="ai-orb" type="button" aria-label="Open curator panel">
+    <span class="ai-orb-shell"></span>
+    <span class="ai-orb-body"></span>
+    <span class="ai-orb-energy"></span>
+    <span class="ai-orb-presence"></span>
+    <span class="ai-orb-ripple ai-orb-ripple-one"></span>
+    <span class="ai-orb-ripple ai-orb-ripple-two"></span>
+    <span class="ai-orb-ripple ai-orb-ripple-three"></span>
+  </button>
 
   <div class="page-shell">
     <header class="site-header">
@@ -332,6 +342,36 @@
           A fluid outer layer with an elongated line and an intentionally restrained finish.
         </p>
         <button class="detail-button" type="button">Add</button>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="curator-panel" id="curator-panel" aria-hidden="true">
+    <div class="curator-panel-inner">
+      <div class="curator-panel-header">
+        <h2>A U S L I / CURATOR</h2>
+        <button class="curator-close" id="curator-close" type="button" aria-label="Close curator panel">
+          Close
+        </button>
+      </div>
+      <div class="curator-input-wrap">
+        <input
+          class="curator-input"
+          id="curator-input"
+          type="text"
+          placeholder="Ask for a direction"
+          aria-label="Curator input"
+        >
+      </div>
+      <div class="curator-suggestions" aria-label="Suggested prompts">
+        <button class="curator-chip" type="button">Show me silver objects</button>
+        <button class="curator-chip" type="button">I want something minimal</button>
+        <button class="curator-chip" type="button">Find a statement piece</button>
+      </div>
+      <div class="curator-response" id="curator-response">
+        <p>
+          The curator is ready. Select a prompt or describe the tone, silhouette, or object you want to explore.
+        </p>
       </div>
     </div>
   </aside>
