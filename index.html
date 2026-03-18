@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A U S L I</title>
+  <meta
+    name="description"
+    content="A U S L I is a minimalist fashion destination curated by instinct."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="site-mark" href="#hero" aria-label="A U S L I home">A U S L I</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#archive">Archive</a>
+        <button class="nav-button" type="button" data-open-first>Focus</button>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
+        <div class="hero-content" id="hero-content">
+          <p class="hero-kicker">Edition 01</p>
+          <h1 id="hero-title">A U S L I</h1>
+          <p class="hero-tagline">curated by instinct</p>
+        </div>
+      </section>
+
+      <section class="threshold-section reveal-section" id="threshold" aria-labelledby="threshold-title">
+        <div class="threshold-copy">
+          <p class="section-label">Edition 01</p>
+          <h2 id="threshold-title">Selected Objects</h2>
+          <p class="threshold-line">FORM / TEXTURE / ATTITUDE</p>
+        </div>
+      </section>
+
+      <section class="feature-section reveal-section" aria-labelledby="feature-one-title">
+        <div class="feature-layout">
+          <div class="feature-media">
+            <img
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+              alt="Noir Drape Coat editorial object"
+              loading="lazy"
+            >
+          </div>
+          <div class="feature-copy">
+            <p class="section-label">Drop 01</p>
+            <h2 id="feature-one-title">Noir Drape Coat</h2>
+            <p class="feature-description">
+              A long fluid silhouette composed with restraint, depth, and a softened metallic presence.
+            </p>
+            <p class="feature-price">$480</p>
+            <button
+              class="feature-link"
+              type="button"
+              data-open-product="0"
+            >View Object</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-section feature-section-reverse reveal-section" aria-labelledby="feature-two-title">
+        <div class="feature-layout">
+          <div class="feature-copy">
+            <p class="section-label">Drop 02</p>
+            <h2 id="feature-two-title">Veil Column Dress</h2>
+            <p class="feature-description">
+              Cut to move quietly through shadow, with a precise line and a cinematic stillness.
+            </p>
+            <p class="feature-price">$360</p>
+            <button
+              class="feature-link"
+              type="button"
+              data-open-product="1"
+            >View Object</button>
+          </div>
+          <div class="feature-media">
+            <img
+              src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
+              alt="Veil Column Dress editorial object"
+              loading="lazy"
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-section feature-section-cinematic reveal-section" aria-labelledby="feature-three-title">
+        <div class="cinematic-media">
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+            alt="Slate Frame Bag editorial object"
+            loading="lazy"
+          >
+        </div>
+        <div class="cinematic-copy">
+          <p class="section-label">Object 03</p>
+          <h2 id="feature-three-title">Slate Frame Bag</h2>
+          <p class="feature-description">
+            A sculpted daily form with matte depth, measured balance, and a discreet attitude.
+          </p>
+          <p class="feature-price">$290</p>
+          <button
+            class="feature-link"
+            type="button"
+            data-open-product="2"
+          >View Object</button>
+        </div>
+      </section>
+
+      <section class="products-section reveal-section" id="archive" aria-labelledby="products-title">
+        <div class="section-heading">
+          <p class="section-label">Archive</p>
+          <h2 id="products-title">Selected Objects</h2>
+        </div>
+
+        <div class="product-grid">
+          <article
+            class="product-card"
+            tabindex="0"
+            data-name="Noir Drape Coat"
+            data-price="$480"
+            data-description="A fluid outer layer with an elongated line and an intentionally restrained finish."
+            data-image="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="product-media">
+              <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+                alt="Noir Drape Coat"
+                loading="lazy"
+              >
+              <div class="product-overlay">
+                <span>Outerwear</span>
+                <span>$480</span>
+              </div>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Outerwear</p>
+                <h3>Noir Drape Coat</h3>
+              </div>
+              <p>$480</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            tabindex="0"
+            data-name="Veil Column Dress"
+            data-price="$360"
+            data-description="A clean column silhouette cut to move slowly, with softened structure and quiet depth."
+            data-image="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="product-media">
+              <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
+                alt="Veil Column Dress"
+                loading="lazy"
+              >
+              <div class="product-overlay">
+                <span>Dresses</span>
+                <span>$360</span>
+              </div>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Dresses</p>
+                <h3>Veil Column Dress</h3>
+              </div>
+              <p>$360</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            tabindex="0"
+            data-name="Slate Frame Bag"
+            data-price="$290"
+            data-description="A sculpted daily piece with a measured proportion, matte surface, and discreet hardware."
+            data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="product-media">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+                alt="Slate Frame Bag"
+                loading="lazy"
+              >
+              <div class="product-overlay">
+                <span>Accessories</span>
+                <span>$290</span>
+              </div>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Accessories</p>
+                <h3>Slate Frame Bag</h3>
+              </div>
+              <p>$290</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            tabindex="0"
+            data-name="Shadow Knit"
+            data-price="$240"
+            data-description="A close, weighted knit with softened structure and a cool tonal finish."
+            data-image="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="product-media">
+              <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+                alt="Shadow Knit"
+                loading="lazy"
+              >
+              <div class="product-overlay">
+                <span>Knitwear</span>
+                <span>$240</span>
+              </div>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Knitwear</p>
+                <h3>Shadow Knit</h3>
+              </div>
+              <p>$240</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            tabindex="0"
+            data-name="Glass Heel"
+            data-price="$310"
+            data-description="A clean heel with minimal hardware and a reflective charcoal surface."
+            data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="product-media">
+              <img
+                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80"
+                alt="Glass Heel"
+                loading="lazy"
+              >
+              <div class="product-overlay">
+                <span>Footwear</span>
+                <span>$310</span>
+              </div>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Footwear</p>
+                <h3>Glass Heel</h3>
+              </div>
+              <p>$310</p>
+            </div>
+          </article>
+
+          <article
+            class="product-card"
+            tabindex="0"
+            data-name="Static Trousers"
+            data-price="$270"
+            data-description="A sharp relaxed trouser with controlled volume and a subdued graphite finish."
+            data-image="https://images.unsplash.com/photo-1506629905607-d9f6464ffa7a?auto=format&fit=crop&w=1200&q=80"
+          >
+            <div class="product-media">
+              <img
+                src="https://images.unsplash.com/photo-1506629905607-d9f6464ffa7a?auto=format&fit=crop&w=1200&q=80"
+                alt="Static Trousers"
+                loading="lazy"
+              >
+              <div class="product-overlay">
+                <span>Tailoring</span>
+                <span>$270</span>
+              </div>
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-category">Tailoring</p>
+                <h3>Static Trousers</h3>
+              </div>
+              <p>$270</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="outro-section reveal-section" aria-labelledby="outro-title">
+        <div class="outro-copy">
+          <h2 id="outro-title">A U S L I</h2>
+          <p class="outro-tagline">curated by instinct</p>
+          <p class="outro-statement">
+            Quiet objects selected for form, texture, and the confidence of restraint.
+          </p>
+        </div>
+        <nav class="outro-nav" aria-label="Footer">
+          <a href="#archive">Archive</a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="mailto:studio@ausli.com">Contact</a>
+        </nav>
+      </section>
+    </main>
+  </div>
+
+  <aside class="detail-overlay" id="detail-overlay" aria-hidden="true">
+    <button class="overlay-close" type="button" aria-label="Close product detail">Close</button>
+    <div class="detail-panel">
+      <div class="detail-visual">
+        <img
+          id="detail-image"
+          src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+          alt=""
+        >
+      </div>
+      <div class="detail-copy">
+        <p class="detail-label">Focus Mode</p>
+        <h2 id="detail-name">Noir Drape Coat</h2>
+        <p class="detail-price" id="detail-price">$480</p>
+        <p class="detail-description" id="detail-description">
+          A fluid outer layer with an elongated line and an intentionally restrained finish.
+        </p>
+        <button class="detail-button" type="button">Add</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
