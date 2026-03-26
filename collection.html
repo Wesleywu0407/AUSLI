@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A U S L I / Collection</title>
+  <meta name="description" content="Browse the A U S L I collection and selected objects archive.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/ausli-app-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/collection.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <button class="ai-node" id="ai-sentinel" type="button" aria-label="Open AUSLI Curator">
+    <span class="ai-node-aura"></span>
+    <span class="ai-node-ripple ai-node-ripple-one"></span>
+    <span class="ai-node-ripple ai-node-ripple-two"></span>
+    <span class="ai-node-ripple ai-node-ripple-three"></span>
+    <span class="ai-node-ring ai-node-ring-back"></span>
+    <span class="ai-node-ring ai-node-ring-front"></span>
+    <span class="ai-node-body"></span>
+    <span class="ai-node-core-wrap">
+      <span class="ai-node-core ai-node-core-left"></span>
+      <span class="ai-node-core ai-node-core-right"></span>
+    </span>
+  </button>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="site-mark" href="index.html" aria-label="A U S L I home">A U S L I</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="main-container page-main">
+      <section class="page-hero reveal-section">
+        <div class="page-hero-copy">
+          <p class="page-kicker">Collection</p>
+          <h1 class="page-title">Selected Objects</h1>
+          <p class="page-intro">
+            A quieter archive of silhouettes, metallic accents, and restrained statement pieces. Built for browsing, still composed like a campaign.
+          </p>
+        </div>
+      </section>
+
+      <section class="collection-split reveal-section">
+        <aside class="collection-aside">
+          <p class="page-kicker">Edit</p>
+          <ul>
+            <li>Outerwear</li>
+            <li>Dresses</li>
+            <li>Accessories</li>
+            <li>Footwear</li>
+          </ul>
+        </aside>
+
+        <section class="archive-grid-section" aria-labelledby="collection-grid-title">
+          <div class="section-heading">
+            <p class="section-label">Archive</p>
+            <h2 id="collection-grid-title">Objects in circulation</h2>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card" tabindex="0" data-name="Noir Drape Coat" data-price="$480" data-description="A fluid outer layer with an elongated line and an intentionally restrained finish." data-image="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80">
+              <div class="product-media">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Noir Drape Coat" loading="lazy">
+                <div class="product-overlay"><span>Outerwear</span><span>$480</span></div>
+              </div>
+              <div class="product-meta"><div><p class="product-category">Outerwear</p><h3>Noir Drape Coat</h3></div><p>$480</p></div>
+            </article>
+
+            <article class="product-card" tabindex="0" data-name="Veil Column Dress" data-price="$360" data-description="A clean column silhouette cut to move slowly, with softened structure and quiet depth." data-image="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80">
+              <div class="product-media">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80" alt="Veil Column Dress" loading="lazy">
+                <div class="product-overlay"><span>Dresses</span><span>$360</span></div>
+              </div>
+              <div class="product-meta"><div><p class="product-category">Dresses</p><h3>Veil Column Dress</h3></div><p>$360</p></div>
+            </article>
+
+            <article class="product-card" tabindex="0" data-name="Slate Frame Bag" data-price="$290" data-description="A sculpted daily piece with a measured proportion, matte surface, and discreet hardware." data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80">
+              <div class="product-media">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80" alt="Slate Frame Bag" loading="lazy">
+                <div class="product-overlay"><span>Accessories</span><span>$290</span></div>
+              </div>
+              <div class="product-meta"><div><p class="product-category">Accessories</p><h3>Slate Frame Bag</h3></div><p>$290</p></div>
+            </article>
+
+            <article class="product-card" tabindex="0" data-name="Shadow Knit" data-price="$240" data-description="A close, weighted knit with softened structure and a cool tonal finish." data-image="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80">
+              <div class="product-media">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80" alt="Shadow Knit" loading="lazy">
+                <div class="product-overlay"><span>Knitwear</span><span>$240</span></div>
+              </div>
+              <div class="product-meta"><div><p class="product-category">Knitwear</p><h3>Shadow Knit</h3></div><p>$240</p></div>
+            </article>
+
+            <article class="product-card" tabindex="0" data-name="Glass Heel" data-price="$310" data-description="A clean heel with minimal hardware and a reflective charcoal surface." data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80">
+              <div class="product-media">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80" alt="Glass Heel" loading="lazy">
+                <div class="product-overlay"><span>Footwear</span><span>$310</span></div>
+              </div>
+              <div class="product-meta"><div><p class="product-category">Footwear</p><h3>Glass Heel</h3></div><p>$310</p></div>
+            </article>
+
+            <article class="product-card" tabindex="0" data-name="Static Trousers" data-price="$270" data-description="A sharp relaxed trouser with controlled volume and a subdued graphite finish." data-image="https://images.unsplash.com/photo-1506629905607-d9f6464ffa7a?auto=format&fit=crop&w=1200&q=80">
+              <div class="product-media">
+                <img src="https://images.unsplash.com/photo-1506629905607-d9f6464ffa7a?auto=format&fit=crop&w=1200&q=80" alt="Static Trousers" loading="lazy">
+                <div class="product-overlay"><span>Tailoring</span><span>$270</span></div>
+              </div>
+              <div class="product-meta"><div><p class="product-category">Tailoring</p><h3>Static Trousers</h3></div><p>$270</p></div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <aside class="detail-overlay" id="detail-overlay" aria-hidden="true">
+    <button class="overlay-close" type="button" aria-label="Close product detail">Close</button>
+    <div class="detail-panel">
+      <div class="detail-visual">
+        <img id="detail-image" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="">
+      </div>
+      <div class="detail-copy">
+        <p class="detail-label">Focus Mode</p>
+        <h2 id="detail-name">Noir Drape Coat</h2>
+        <p class="detail-price" id="detail-price">$480</p>
+        <p class="detail-description" id="detail-description">A fluid outer layer with an elongated line and an intentionally restrained finish.</p>
+        <button class="detail-button" type="button">Add</button>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="curator-panel" id="curator-panel" aria-hidden="true">
+    <div class="curator-panel-inner">
+      <div class="curator-panel-header">
+        <h2>A U S L I / CURATOR</h2>
+        <button class="curator-close" id="curator-close" type="button" aria-label="Close curator panel">Close</button>
+      </div>
+      <form class="curator-form" id="curator-form">
+        <div class="curator-input-wrap">
+          <input class="curator-input" id="curator-input" type="text" placeholder="Ask AUSLI for a direction" aria-label="Curator input">
+          <button class="curator-submit" id="curator-submit" type="submit">Transmit</button>
+        </div>
+      </form>
+      <p class="curator-status" id="curator-status">AUSLI SENTINEL is present.</p>
+      <div class="curator-suggestions" aria-label="Suggested prompts">
+        <button class="curator-chip" type="button">Show me silver objects</button>
+        <button class="curator-chip" type="button">I want something minimal</button>
+        <button class="curator-chip" type="button">Find a statement piece</button>
+      </div>
+      <div class="curator-response" id="curator-response">
+        <p>AUSLI SENTINEL is ready. Select a prompt or describe the tone, silhouette, or object you want to explore.</p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

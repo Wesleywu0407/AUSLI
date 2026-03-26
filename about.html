@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A U S L I / About</title>
+  <meta name="description" content="About the A U S L I fashion world and its curated object language.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/ausli-app-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <button class="ai-node" id="ai-sentinel" type="button" aria-label="Open AUSLI Curator">
+    <span class="ai-node-aura"></span>
+    <span class="ai-node-ripple ai-node-ripple-one"></span>
+    <span class="ai-node-ripple ai-node-ripple-two"></span>
+    <span class="ai-node-ripple ai-node-ripple-three"></span>
+    <span class="ai-node-ring ai-node-ring-back"></span>
+    <span class="ai-node-ring ai-node-ring-front"></span>
+    <span class="ai-node-body"></span>
+    <span class="ai-node-core-wrap">
+      <span class="ai-node-core ai-node-core-left"></span>
+      <span class="ai-node-core ai-node-core-right"></span>
+    </span>
+  </button>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="site-mark" href="index.html" aria-label="A U S L I home">A U S L I</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
+
+    <main class="main-container about-page">
+      <section class="about-hero reveal-section">
+        <div class="about-hero-copy">
+          <p class="page-kicker">A U S L I</p>
+          <h1 class="page-title">Curated by instinct, shaped by restraint.</h1>
+          <p class="page-intro">
+            A U S L I treats clothing and accessories as sculptural objects. The world is dark, precise, and spacious, with technology woven in quietly rather than displayed loudly.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-grid">
+        <article class="about-section reveal-section">
+          <div class="about-section-copy">
+            <p class="section-label">Direction</p>
+            <h2 class="page-title">Form over noise</h2>
+            <p class="about-text">
+              Every page is built around line, texture, and attitude. The interface behaves more like an editorial environment than a store template.
+            </p>
+          </div>
+        </article>
+
+        <article class="about-section reveal-section">
+          <div class="about-section-copy">
+            <p class="section-label">System</p>
+            <h2 class="page-title">Objects with memory</h2>
+            <p class="about-text">
+              The AUSLI SENTINEL and the sculptural hero are part of the same visual language: silver forms, orbital motion, and a restrained sense of presence.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <aside class="curator-panel" id="curator-panel" aria-hidden="true">
+    <div class="curator-panel-inner">
+      <div class="curator-panel-header">
+        <h2>A U S L I / CURATOR</h2>
+        <button class="curator-close" id="curator-close" type="button" aria-label="Close curator panel">Close</button>
+      </div>
+      <form class="curator-form" id="curator-form">
+        <div class="curator-input-wrap">
+          <input class="curator-input" id="curator-input" type="text" placeholder="Ask AUSLI for a direction" aria-label="Curator input">
+          <button class="curator-submit" id="curator-submit" type="submit">Transmit</button>
+        </div>
+      </form>
+      <p class="curator-status" id="curator-status">AUSLI SENTINEL is present.</p>
+      <div class="curator-suggestions" aria-label="Suggested prompts">
+        <button class="curator-chip" type="button">Show me silver objects</button>
+        <button class="curator-chip" type="button">I want something minimal</button>
+        <button class="curator-chip" type="button">Find a statement piece</button>
+      </div>
+      <div class="curator-response" id="curator-response">
+        <p>AUSLI SENTINEL is ready. Select a prompt or describe the tone, silhouette, or object you want to explore.</p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

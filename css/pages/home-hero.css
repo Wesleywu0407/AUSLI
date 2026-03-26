@@ -1,0 +1,117 @@
+.hero {
+  --hero-charge: 0;
+  min-height: 172vh;
+  display: block;
+  overflow: clip;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(110, 68, 255, calc(var(--hero-charge) * 0.1 + 0.04)) 0%,
+      rgba(18, 16, 34, calc(var(--hero-charge) * 0.06 + 0.92)) 36%,
+      rgba(10, 10, 18, 1) 100%
+    ),
+    radial-gradient(
+      circle at 50% 36%,
+      rgba(196, 181, 253, calc(var(--hero-charge) * 0.05 + 0.03)),
+      rgba(110, 68, 255, calc(var(--hero-charge) * 0.035 + 0.018)) 20%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 50% 58%,
+      rgba(84, 66, 140, calc(var(--hero-charge) * 0.04 + 0.015)),
+      transparent 52%
+    );
+  opacity: calc(0.28 + var(--hero-charge) * 0.48);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 34vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92), transparent);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-scene {
+  position: sticky;
+  top: 0;
+  /* Escape the parent .hero padding-inline so the canvas fills the full viewport */
+  width: 100vw;
+  margin-inline: calc(-1 * clamp(1.25rem, 4vw, 4rem));
+  height: 100vh;
+  z-index: 2;
+  opacity: 0.98;
+  overflow: hidden;
+  transition:
+    opacity 0.9s var(--luxury-ease),
+    transform 1s var(--luxury-ease);
+  will-change: opacity, transform;
+}
+
+.hero-scene canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  pointer-events: none;
+  transition:
+    opacity 0.75s var(--luxury-ease),
+    transform 0.85s var(--luxury-ease);
+  will-change: opacity, transform;
+}
+
+.hero-kicker {
+  margin: 0 0 var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.34em;
+  font-size: 0.72rem;
+  color: rgba(235, 230, 248, 0.76);
+  text-shadow: 0 0 16px rgba(139, 92, 246, 0.08);
+}
+
+.hero h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: clamp(2.75rem, 8vw, 7rem);
+  letter-spacing: 0.42em;
+  color: rgba(246, 242, 255, 0.93);
+  text-shadow:
+    0 0 18px rgba(196, 181, 253, 0.08),
+    0 0 44px rgba(110, 68, 255, 0.05);
+}
+
+.hero-tagline {
+  margin: var(--space-sm) 0 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+  letter-spacing: 0.16em;
+  color: rgba(221, 214, 239, 0.78);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 140vh;
+  }
+
+  .hero h1 {
+    letter-spacing: 0.12em;
+  }
+}

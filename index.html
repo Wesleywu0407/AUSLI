@@ -15,49 +15,81 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/pages/home-hero.css">
+  <link rel="stylesheet" href="css/pages/scene-02.css">
 </head>
-<body>
+<body data-dedicated-hero="true">
   <div class="grain" aria-hidden="true"></div>
   <div class="cursor" aria-hidden="true"></div>
-  <button class="ai-orb" id="ai-orb" type="button" aria-label="Open curator panel">
-    <span class="ai-orb-shell"></span>
-    <span class="ai-orb-body"></span>
-    <span class="ai-orb-energy"></span>
-    <span class="ai-orb-presence"></span>
-    <span class="ai-orb-ripple ai-orb-ripple-one"></span>
-    <span class="ai-orb-ripple ai-orb-ripple-two"></span>
-    <span class="ai-orb-ripple ai-orb-ripple-three"></span>
+  <button class="ai-node" id="ai-sentinel" type="button" aria-label="Open AUSLI Curator">
+    <span class="ai-node-aura"></span>
+    <span class="ai-node-ripple ai-node-ripple-one"></span>
+    <span class="ai-node-ripple ai-node-ripple-two"></span>
+    <span class="ai-node-ripple ai-node-ripple-three"></span>
+    <span class="ai-node-ring ai-node-ring-back"></span>
+    <span class="ai-node-ring ai-node-ring-front"></span>
+    <span class="ai-node-body"></span>
+    <span class="ai-node-core-wrap">
+      <span class="ai-node-core ai-node-core-left"></span>
+      <span class="ai-node-core ai-node-core-right"></span>
+    </span>
   </button>
 
   <div class="page-shell">
     <header class="site-header">
-      <a class="site-mark" href="#hero" aria-label="A U S L I home">A U S L I</a>
+      <a class="site-mark" href="index.html" aria-label="A U S L I home">A U S L I</a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#archive">Archive</a>
+        <a href="collection.html">Collection</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
         <button class="nav-button" type="button" data-open-first>Focus</button>
       </nav>
     </header>
 
-    <main class="main-container">
+    <main class="main-container storyflow" id="storyflow">
       <section class="hero" id="hero" aria-labelledby="hero-title">
         <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
         <div class="hero-content" id="hero-content">
-          <p class="hero-kicker">Edition 01</p>
-          <h1 id="hero-title">A U S L I</h1>
-          <p class="hero-tagline">curated by instinct</p>
+          <p class="hero-kicker" style="opacity:0;transition:opacity 0.8s ease-out">Edition 01</p>
+          <h1 id="hero-title" style="display:none">A U S L I</h1>
+          <p class="hero-tagline" style="display:none">curated by instinct</p>
         </div>
       </section>
 
-      <section class="threshold-section reveal-section" id="threshold" aria-labelledby="threshold-title">
-        <div class="threshold-copy">
-          <p class="section-label">Edition 01</p>
-          <h2 id="threshold-title">Selected Objects</h2>
-          <p class="threshold-line">FORM / TEXTURE / ATTITUDE</p>
+      <section
+        class="scene-02 reveal-section story-section"
+        id="scene-02"
+        data-story-section="scene-02"
+        aria-label="Noir Drape Coat reveal"
+      >
+        <div class="scene-02__sticky">
+          <div class="scene-02__product">
+            <img
+              class="scene-02__product-image"
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=80"
+              alt=""
+              loading="lazy"
+            >
+            <div class="scene-02__product-overlay"></div>
+          </div>
+
+          <div class="scene-02__fabric-base" aria-hidden="true"></div>
+
+          <div class="scene-02__split scene-02__split-left" aria-hidden="true"></div>
+          <div class="scene-02__split scene-02__split-right" aria-hidden="true"></div>
+
+          <div class="scene-02__seam" aria-hidden="true"></div>
         </div>
       </section>
 
-      <section class="feature-section reveal-section" aria-labelledby="feature-one-title">
+      <section
+        class="feature-section reveal-section story-section"
+        data-story-section="chapter-one"
+        aria-labelledby="feature-one-title"
+      >
         <div class="feature-layout">
           <div class="feature-media">
             <img
@@ -82,7 +114,11 @@
         </div>
       </section>
 
-      <section class="feature-section feature-section-reverse reveal-section" aria-labelledby="feature-two-title">
+      <section
+        class="feature-section feature-section-reverse reveal-section story-section"
+        data-story-section="chapter-two"
+        aria-labelledby="feature-two-title"
+      >
         <div class="feature-layout">
           <div class="feature-copy">
             <p class="section-label">Drop 02</p>
@@ -107,7 +143,11 @@
         </div>
       </section>
 
-      <section class="feature-section feature-section-cinematic reveal-section" aria-labelledby="feature-three-title">
+      <section
+        class="feature-section feature-section-cinematic reveal-section story-section"
+        data-story-section="chapter-three"
+        aria-labelledby="feature-three-title"
+      >
         <div class="cinematic-media">
           <img
             src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
@@ -130,7 +170,12 @@
         </div>
       </section>
 
-      <section class="products-section reveal-section" id="archive" aria-labelledby="products-title">
+      <section
+        class="products-section reveal-section story-section"
+        id="archive"
+        data-story-section="archive"
+        aria-labelledby="products-title"
+      >
         <div class="section-heading">
           <p class="section-label">Archive</p>
           <h2 id="products-title">Selected Objects</h2>
@@ -307,7 +352,11 @@
         </div>
       </section>
 
-      <section class="outro-section reveal-section" aria-labelledby="outro-title">
+      <section
+        class="outro-section reveal-section story-section"
+        data-story-section="outro"
+        aria-labelledby="outro-title"
+      >
         <div class="outro-copy">
           <h2 id="outro-title">A U S L I</h2>
           <p class="outro-tagline">curated by instinct</p>
@@ -354,15 +403,19 @@
           Close
         </button>
       </div>
-      <div class="curator-input-wrap">
-        <input
-          class="curator-input"
-          id="curator-input"
-          type="text"
-          placeholder="Ask for a direction"
-          aria-label="Curator input"
-        >
-      </div>
+      <form class="curator-form" id="curator-form">
+        <div class="curator-input-wrap">
+          <input
+            class="curator-input"
+            id="curator-input"
+            type="text"
+            placeholder="Ask AUSLI for a direction"
+            aria-label="Curator input"
+          >
+          <button class="curator-submit" id="curator-submit" type="submit">Transmit</button>
+        </div>
+      </form>
+      <p class="curator-status" id="curator-status">AUSLI SENTINEL is present.</p>
       <div class="curator-suggestions" aria-label="Suggested prompts">
         <button class="curator-chip" type="button">Show me silver objects</button>
         <button class="curator-chip" type="button">I want something minimal</button>
@@ -370,14 +423,25 @@
       </div>
       <div class="curator-response" id="curator-response">
         <p>
-          The curator is ready. Select a prompt or describe the tone, silhouette, or object you want to explore.
+          AUSLI SENTINEL is ready. Select a prompt or describe the tone, silhouette, or object you want to explore.
         </p>
       </div>
     </div>
   </aside>
 
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script>
+    window.__AUSLI_USE_DEDICATED_HERO__ = true;
+  </script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="main.js"></script>
+  <script type="module" src="js/home-hero/index.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

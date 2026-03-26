@@ -1,0 +1,195 @@
+.scene-02 {
+  --scene-02-progress: 0;
+  position: relative;
+  height: 290vh;
+  margin-top: -16vh;
+  background:
+    radial-gradient(circle at 50% 6%, rgba(188, 198, 217, 0.04), transparent 24%),
+    linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(2, 3, 5, 0.98) 38%, rgba(0, 0, 0, 1) 100%);
+}
+
+.scene-02__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.scene-02__product,
+.scene-02__fabric-base,
+.scene-02__split,
+.scene-02__seam {
+  position: absolute;
+  inset: 0;
+}
+
+.scene-02__product {
+  z-index: 1;
+  opacity: 0.28;
+  transform: scale(1.04);
+  transition:
+    opacity 0.3s linear,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.scene-02__product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.82) contrast(1.04) brightness(0.82);
+}
+
+.scene-02__product-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 48%, rgba(20, 23, 30, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(2, 3, 7, 0.64) 0%, rgba(4, 4, 6, 0.34) 42%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.scene-02__fabric-base {
+  z-index: 2;
+  background:
+    radial-gradient(circle at 50% 26%, rgba(226, 228, 235, 0.06), transparent 18%),
+    radial-gradient(circle at 18% 50%, rgba(255, 255, 255, 0.04), transparent 30%),
+    radial-gradient(circle at 82% 46%, rgba(255, 255, 255, 0.03), transparent 34%),
+    linear-gradient(90deg, rgba(3, 4, 8, 0.96) 0%, rgba(12, 13, 17, 0.98) 28%, rgba(7, 8, 12, 0.98) 52%, rgba(12, 13, 17, 0.98) 72%, rgba(2, 3, 6, 0.96) 100%);
+  opacity: 0.94;
+  transform: scale(1.01);
+  transition:
+    opacity 0.35s linear,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.scene-02__fabric-base::before,
+.scene-02__fabric-base::after,
+.scene-02__split::before,
+.scene-02__split::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.scene-02__fabric-base::before {
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.022) 0,
+      rgba(255, 255, 255, 0.022) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.01) 0,
+      rgba(255, 255, 255, 0.01) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  opacity: 0.24;
+  mix-blend-mode: soft-light;
+}
+
+.scene-02__fabric-base::after {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 20%, transparent 80%, rgba(0, 0, 0, 0.26)),
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.045), transparent 34%);
+  opacity: 0.55;
+}
+
+.scene-02__split {
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: 3;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.scene-02__split-left {
+  left: 0;
+  transform-origin: right center;
+}
+
+.scene-02__split-right {
+  right: 0;
+  transform-origin: left center;
+}
+
+.scene-02__split::before {
+  background:
+    radial-gradient(circle at 50% 22%, rgba(240, 242, 246, 0.08), transparent 22%),
+    linear-gradient(180deg, rgba(15, 16, 20, 0.98) 0%, rgba(9, 10, 14, 0.99) 38%, rgba(2, 2, 4, 1) 100%);
+}
+
+.scene-02__split::after {
+  opacity: 0.88;
+}
+
+.scene-02__split-left::after {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05), transparent 18%, transparent 78%, rgba(255, 255, 255, 0.08) 100%),
+    radial-gradient(circle at 78% 48%, rgba(255, 255, 255, 0.09), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.2));
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 94%, rgba(0, 0, 0, 0.65) 98%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.scene-02__split-right::after {
+  background:
+    linear-gradient(270deg, rgba(255, 255, 255, 0.05), transparent 18%, transparent 78%, rgba(255, 255, 255, 0.08) 100%),
+    radial-gradient(circle at 22% 48%, rgba(255, 255, 255, 0.09), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.2));
+  mask-image: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 94%, rgba(0, 0, 0, 0.65) 98%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.scene-02__seam {
+  left: 50%;
+  width: 2px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateX(-50%) scaleY(0.12);
+  transform-origin: center center;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.34) 16%, rgba(255, 255, 255, 0.56) 50%, rgba(255, 255, 255, 0.34) 84%, transparent 100%);
+  filter: blur(0.5px);
+  will-change: opacity, transform;
+}
+
+.scene-02__sticky::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 26vh;
+  z-index: 5;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92), transparent);
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .scene-02 {
+    height: 260vh;
+    margin-top: -10vh;
+  }
+
+  .scene-02__product-image {
+    object-position: center 18%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-02 {
+    height: 180vh;
+  }
+
+  .scene-02__product,
+  .scene-02__fabric-base,
+  .scene-02__split,
+  .scene-02__seam {
+    transition: none;
+  }
+}

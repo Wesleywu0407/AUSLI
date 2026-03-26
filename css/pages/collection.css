@@ -1,0 +1,73 @@
+.page-main {
+  padding-inline: clamp(1.25rem, 4vw, 4rem);
+}
+
+.page-hero {
+  min-height: 72vh;
+  display: grid;
+  align-items: end;
+  padding: calc(var(--space-2xl) * 1.2) 0 var(--space-xl);
+}
+
+.page-hero-copy {
+  max-width: 48rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.page-title {
+  font-size: clamp(2.4rem, 6vw, 5.4rem);
+  line-height: 1.02;
+}
+
+.page-intro {
+  margin: 0;
+  max-width: 34rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.collection-split {
+  padding-bottom: var(--space-xl);
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.collection-aside {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  position: sticky;
+  top: 6rem;
+}
+
+.collection-aside p,
+.collection-aside ul {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.collection-aside ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.archive-grid-section {
+  padding-bottom: var(--space-3xl);
+}
+
+@media (max-width: 900px) {
+  .collection-split {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-aside {
+    position: static;
+  }
+}
