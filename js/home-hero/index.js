@@ -18,7 +18,6 @@ import {
 } from "./scene.js";
 import { createScrollController } from "./scroll.js";
 import { createAnimationController } from "./animation.js";
-import { initScene02 } from "./scene02.js";
 
 window.__AUSLI_USE_DEDICATED_HERO__ = true;
 window.__AUSLI_DEBUG_GLB__ = false;
@@ -233,11 +232,6 @@ async function createMinimalGlbDebugScene({ dom }) {
     easeInOutCubic,
     easeOutQuint
   });
-  const scene02Controller = initScene02({
-    clamp,
-    easeInOutCubic,
-    easeOutCubic
-  });
 
   const animationController = createAnimationController({
     THREE,
@@ -262,15 +256,12 @@ async function createMinimalGlbDebugScene({ dom }) {
     "scroll",
     () => {
       scrollController.updateStoryFlow();
-      scene02Controller?.update();
     },
     { passive: true }
   );
   window.addEventListener("resize", scrollController.updateStoryFlow);
-  window.addEventListener("resize", () => scene02Controller?.handleResize());
 
   scrollController.updateHeroScroll();
   scrollController.updateStoryFlow();
-  scene02Controller?.update();
   animationController.animate();
 })();

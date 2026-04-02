@@ -7,7 +7,7 @@ export function getHeroDom() {
     heroTagline: document.querySelector(".hero-tagline"),
     heroKicker: document.querySelector(".hero-kicker"),
     storyFlow: document.getElementById("storyflow"),
-    threshold: document.getElementById("scene-02"),
+    threshold: document.querySelector(".collection-section"),
     storySections: [...document.querySelectorAll("[data-story-section]")]
   };
 }

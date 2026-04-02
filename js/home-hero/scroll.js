@@ -120,6 +120,7 @@ export function createScrollController({
     const thresholdBridge = easeOutQuint(clamp((progress - 0.2) / 0.62, 0, 1));
 
     hero.style.setProperty("--hero-charge", charge.toFixed(4));
+    hero.style.setProperty("--hero-progress", progress.toFixed(4));
     if (storyFlow) {
       storyFlow.style.setProperty("--hero-charge", charge.toFixed(4));
     }
@@ -139,8 +140,8 @@ export function createScrollController({
       heroTagline.style.transform = `translateY(${taglineProgress * -22}px)`;
     }
 
-    heroContent.style.opacity = `${1 - uiProgress * 0.26}`;
-    heroContent.style.transform = `translateY(${uiProgress * -22}px)`;
+    heroContent.style.opacity = `${1 - uiProgress * 0.16}`;
+    heroContent.style.transform = `translateY(${uiProgress * -10}px)`;
 
     const sceneOpacity = 0.96 - uiProgress * 0.06 - charge * 0.035;
     heroScene.style.opacity = `${sceneOpacity}`;

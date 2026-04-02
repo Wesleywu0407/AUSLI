@@ -53,323 +53,349 @@
       <section class="hero" id="hero" aria-labelledby="hero-title">
         <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
         <div class="hero-content" id="hero-content">
-          <p class="hero-kicker" style="opacity:0;transition:opacity 0.8s ease-out">Edition 01</p>
-          <h1 id="hero-title" style="display:none">A U S L I</h1>
-          <p class="hero-tagline" style="display:none">curated by instinct</p>
+          <div class="hero-grid-floor" aria-hidden="true"></div>
+          <div class="hero-vignette" aria-hidden="true"></div>
+
+          <div class="hero-stage" aria-hidden="true">
+            <div class="hero-wordmark-wrap">
+              <div class="hero-wordmark-shadow">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-1">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-2">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-3">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-4">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-5">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-6">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-7">AUSLI</div>
+              <div class="hero-wordmark-depth hero-wordmark-depth-8">AUSLI</div>
+              <div class="hero-wordmark-main">
+                <span class="hero-letter hero-letter-solid">A</span>
+                <span class="hero-letter hero-letter-image hero-letter-image-u">U</span>
+                <span class="hero-letter hero-letter-image hero-letter-image-s">S</span>
+                <span class="hero-letter hero-letter-solid">L</span>
+                <span class="hero-letter hero-letter-image hero-letter-image-i">I</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-copy">
+            <p class="hero-kicker hero-kicker-hidden" aria-hidden="true">Edition 01</p>
+            <h1 id="hero-title" class="hero-title-accessible">A U S L I</h1>
+            <div class="hero-tagline-wrap">
+              <span class="hero-tagline-line" aria-hidden="true"></span>
+              <p class="hero-tagline">Curated by Instinct</p>
+              <span class="hero-tagline-line" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="hero-scroll-indicator" aria-hidden="true">
+            <div class="hero-scroll-line">
+              <span class="hero-scroll-line-fill"></span>
+            </div>
+            <span class="hero-scroll-label">Scroll</span>
+          </div>
         </div>
       </section>
 
       <section
-        class="scene-02 reveal-section story-section"
-        id="scene-02"
-        data-story-section="scene-02"
-        aria-label="Noir Drape Coat reveal"
+        class="collection-section reveal-section story-section"
+        data-story-section="featured"
+        aria-labelledby="featured-title"
       >
-        <div class="scene-02__sticky">
-          <div class="scene-02__product">
-            <img
-              class="scene-02__product-image"
-              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=80"
-              alt=""
-              loading="lazy"
-            >
-            <div class="scene-02__product-overlay"></div>
-          </div>
-
-          <div class="scene-02__fabric-base" aria-hidden="true"></div>
-
-          <div class="scene-02__split scene-02__split-left" aria-hidden="true"></div>
-          <div class="scene-02__split scene-02__split-right" aria-hidden="true"></div>
-
-          <div class="scene-02__seam" aria-hidden="true"></div>
+        <div class="section-header">
+          <p class="section-label">Featured Collection</p>
+          <div class="section-rule" aria-hidden="true"></div>
         </div>
-      </section>
 
-      <section
-        class="feature-section reveal-section story-section"
-        data-story-section="chapter-one"
-        aria-labelledby="feature-one-title"
-      >
-        <div class="feature-layout">
-          <div class="feature-media">
-            <img
-              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
-              alt="Noir Drape Coat editorial object"
-              loading="lazy"
-            >
-          </div>
-          <div class="feature-copy">
-            <p class="section-label">Drop 01</p>
-            <h2 id="feature-one-title">Noir Drape Coat</h2>
-            <p class="feature-description">
-              A long fluid silhouette composed with restraint, depth, and a softened metallic presence.
-            </p>
-            <p class="feature-price">$480</p>
-            <button
-              class="feature-link"
-              type="button"
-              data-open-product="0"
-            >View Object</button>
-          </div>
-        </div>
-      </section>
+        <div class="collection-grid">
+          <article class="collection-card collection-card-large">
+            <div class="collection-card-media">
+              <img
+                src="https://images.unsplash.com/photo-1765306552441-cd32bb216b0c?auto=format&fit=crop&w=1400&q=80"
+                alt="Sculptural Coat editorial image"
+                loading="lazy"
+              >
+            </div>
+            <div class="collection-card-meta">
+              <h2 id="featured-title">Sculptural Coat</h2>
+              <p>$1,890</p>
+            </div>
+          </article>
 
-      <section
-        class="feature-section feature-section-reverse reveal-section story-section"
-        data-story-section="chapter-two"
-        aria-labelledby="feature-two-title"
-      >
-        <div class="feature-layout">
-          <div class="feature-copy">
-            <p class="section-label">Drop 02</p>
-            <h2 id="feature-two-title">Veil Column Dress</h2>
-            <p class="feature-description">
-              Cut to move quietly through shadow, with a precise line and a cinematic stillness.
-            </p>
-            <p class="feature-price">$360</p>
-            <button
-              class="feature-link"
-              type="button"
-              data-open-product="1"
-            >View Object</button>
-          </div>
-          <div class="feature-media">
-            <img
-              src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
-              alt="Veil Column Dress editorial object"
-              loading="lazy"
-            >
+          <div class="collection-stack">
+            <article class="collection-card">
+              <div class="collection-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1774544653042-e40da180c25a?auto=format&fit=crop&w=1200&q=80"
+                  alt="Oversized Blazer editorial image"
+                  loading="lazy"
+                >
+              </div>
+              <div class="collection-card-meta">
+                <h3>Oversized Blazer</h3>
+                <p>$2,150</p>
+              </div>
+            </article>
+
+            <article class="collection-card">
+              <div class="collection-card-media">
+                <img
+                  src="https://images.unsplash.com/photo-1769650795580-18da0717e758?auto=format&fit=crop&w=1200&q=80"
+                  alt="Architectural Dress editorial image"
+                  loading="lazy"
+                >
+              </div>
+              <div class="collection-card-meta">
+                <h3>Architectural Dress</h3>
+                <p>$1,650</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section
-        class="feature-section feature-section-cinematic reveal-section story-section"
-        data-story-section="chapter-three"
-        aria-labelledby="feature-three-title"
-      >
-        <div class="cinematic-media">
-          <img
-            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
-            alt="Slate Frame Bag editorial object"
-            loading="lazy"
-          >
-        </div>
-        <div class="cinematic-copy">
-          <p class="section-label">Object 03</p>
-          <h2 id="feature-three-title">Slate Frame Bag</h2>
-          <p class="feature-description">
-            A sculpted daily form with matte depth, measured balance, and a discreet attitude.
-          </p>
-          <p class="feature-price">$290</p>
-          <button
-            class="feature-link"
-            type="button"
-            data-open-product="2"
-          >View Object</button>
-        </div>
-      </section>
-
-      <section
-        class="products-section reveal-section story-section"
+        class="arrivals-section reveal-section story-section"
         id="archive"
-        data-story-section="archive"
-        aria-labelledby="products-title"
+        data-story-section="arrivals"
+        aria-labelledby="arrivals-title"
       >
-        <div class="section-heading">
-          <p class="section-label">Archive</p>
-          <h2 id="products-title">Selected Objects</h2>
+        <div class="section-header">
+          <p class="section-label">New Arrivals</p>
+          <div class="section-rule" aria-hidden="true"></div>
         </div>
 
-        <div class="product-grid">
+        <h2 id="arrivals-title" class="arrivals-title-hidden">New Arrivals</h2>
+
+        <div class="arrivals-grid">
           <article
-            class="product-card"
+            class="product-card arrivals-card"
             tabindex="0"
-            data-name="Noir Drape Coat"
-            data-price="$480"
-            data-description="A fluid outer layer with an elongated line and an intentionally restrained finish."
-            data-image="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
+            data-name="Leather Essentials"
+            data-price="$890"
+            data-description="Leather essentials reduced to a crisp silhouette and quiet structure."
+            data-image="https://images.unsplash.com/photo-1758887953059-ca6f8e454207?auto=format&fit=crop&w=1200&q=80"
           >
-            <div class="product-media">
+            <div class="product-media arrivals-media">
               <img
-                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80"
-                alt="Noir Drape Coat"
+                src="https://images.unsplash.com/photo-1758887953059-ca6f8e454207?auto=format&fit=crop&w=1200&q=80"
+                alt="Leather Essentials"
                 loading="lazy"
               >
-              <div class="product-overlay">
-                <span>Outerwear</span>
-                <span>$480</span>
-              </div>
+              <div class="arrivals-hover"><span>View Details</span></div>
             </div>
-            <div class="product-meta">
-              <div>
-                <p class="product-category">Outerwear</p>
-                <h3>Noir Drape Coat</h3>
-              </div>
-              <p>$480</p>
+            <div class="product-meta arrivals-meta">
+              <h3>Leather Essentials</h3>
+              <p>$890</p>
             </div>
           </article>
 
           <article
-            class="product-card"
+            class="product-card arrivals-card"
             tabindex="0"
-            data-name="Veil Column Dress"
-            data-price="$360"
-            data-description="A clean column silhouette cut to move slowly, with softened structure and quiet depth."
-            data-image="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
+            data-name="Technical Jacket"
+            data-price="$1,950"
+            data-description="A dark technical jacket with weight, precision, and a sharp silhouette."
+            data-image="https://images.unsplash.com/photo-1771310961652-1af9711686ec?auto=format&fit=crop&w=1200&q=80"
           >
-            <div class="product-media">
+            <div class="product-media arrivals-media">
               <img
-                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80"
-                alt="Veil Column Dress"
+                src="https://images.unsplash.com/photo-1771310961652-1af9711686ec?auto=format&fit=crop&w=1200&q=80"
+                alt="Technical Jacket"
                 loading="lazy"
               >
-              <div class="product-overlay">
-                <span>Dresses</span>
-                <span>$360</span>
-              </div>
+              <div class="arrivals-hover"><span>View Details</span></div>
             </div>
-            <div class="product-meta">
-              <div>
-                <p class="product-category">Dresses</p>
-                <h3>Veil Column Dress</h3>
-              </div>
-              <p>$360</p>
+            <div class="product-meta arrivals-meta">
+              <h3>Technical Jacket</h3>
+              <p>$1,950</p>
             </div>
           </article>
 
           <article
-            class="product-card"
+            class="product-card arrivals-card"
             tabindex="0"
-            data-name="Slate Frame Bag"
-            data-price="$290"
-            data-description="A sculpted daily piece with a measured proportion, matte surface, and discreet hardware."
-            data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+            data-name="Wide Leg Trousers"
+            data-price="$790"
+            data-description="Relaxed tailoring with sharp volume and deliberate dark restraint."
+            data-image="https://images.unsplash.com/photo-1570653321586-3bb42aaee967?auto=format&fit=crop&w=1200&q=80"
           >
-            <div class="product-media">
+            <div class="product-media arrivals-media">
               <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
-                alt="Slate Frame Bag"
+                src="https://images.unsplash.com/photo-1570653321586-3bb42aaee967?auto=format&fit=crop&w=1200&q=80"
+                alt="Wide Leg Trousers"
                 loading="lazy"
               >
-              <div class="product-overlay">
-                <span>Accessories</span>
-                <span>$290</span>
-              </div>
+              <div class="arrivals-hover"><span>View Details</span></div>
             </div>
-            <div class="product-meta">
-              <div>
-                <p class="product-category">Accessories</p>
-                <h3>Slate Frame Bag</h3>
-              </div>
-              <p>$290</p>
+            <div class="product-meta arrivals-meta">
+              <h3>Wide Leg Trousers</h3>
+              <p>$790</p>
             </div>
           </article>
 
           <article
-            class="product-card"
+            class="product-card arrivals-card"
             tabindex="0"
-            data-name="Shadow Knit"
-            data-price="$240"
-            data-description="A close, weighted knit with softened structure and a cool tonal finish."
-            data-image="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
+            data-name="Merino Turtleneck"
+            data-price="$650"
+            data-description="A dense merino layer softened into a sculptural daily uniform."
+            data-image="https://images.unsplash.com/photo-1763067036483-5034c50839a2?auto=format&fit=crop&w=1200&q=80"
           >
-            <div class="product-media">
+            <div class="product-media arrivals-media">
               <img
-                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
-                alt="Shadow Knit"
+                src="https://images.unsplash.com/photo-1763067036483-5034c50839a2?auto=format&fit=crop&w=1200&q=80"
+                alt="Merino Turtleneck"
                 loading="lazy"
               >
-              <div class="product-overlay">
-                <span>Knitwear</span>
-                <span>$240</span>
-              </div>
+              <div class="arrivals-hover"><span>View Details</span></div>
             </div>
-            <div class="product-meta">
-              <div>
-                <p class="product-category">Knitwear</p>
-                <h3>Shadow Knit</h3>
-              </div>
-              <p>$240</p>
+            <div class="product-meta arrivals-meta">
+              <h3>Merino Turtleneck</h3>
+              <p>$650</p>
             </div>
           </article>
 
           <article
-            class="product-card"
+            class="product-card arrivals-card"
             tabindex="0"
-            data-name="Glass Heel"
-            data-price="$310"
-            data-description="A clean heel with minimal hardware and a reflective charcoal surface."
-            data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80"
+            data-name="Chelsea Boots"
+            data-price="$1,250"
+            data-description="Dark minimalist boots with a clean line and precise proportion."
+            data-image="https://images.unsplash.com/photo-1503120515984-e7d7a5f84601?auto=format&fit=crop&w=1200&q=80"
           >
-            <div class="product-media">
+            <div class="product-media arrivals-media">
               <img
-                src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1200&q=80"
-                alt="Glass Heel"
+                src="https://images.unsplash.com/photo-1503120515984-e7d7a5f84601?auto=format&fit=crop&w=1200&q=80"
+                alt="Chelsea Boots"
                 loading="lazy"
               >
-              <div class="product-overlay">
-                <span>Footwear</span>
-                <span>$310</span>
-              </div>
+              <div class="arrivals-hover"><span>View Details</span></div>
             </div>
-            <div class="product-meta">
-              <div>
-                <p class="product-category">Footwear</p>
-                <h3>Glass Heel</h3>
-              </div>
-              <p>$310</p>
+            <div class="product-meta arrivals-meta">
+              <h3>Chelsea Boots</h3>
+              <p>$1,250</p>
             </div>
           </article>
 
           <article
-            class="product-card"
+            class="product-card arrivals-card"
             tabindex="0"
-            data-name="Static Trousers"
-            data-price="$270"
-            data-description="A sharp relaxed trouser with controlled volume and a subdued graphite finish."
-            data-image="https://images.unsplash.com/photo-1506629905607-d9f6464ffa7a?auto=format&fit=crop&w=1200&q=80"
+            data-name="Structured Coat"
+            data-price="$2,350"
+            data-description="An editorial outer layer shaped by shadow, form, and deliberate control."
+            data-image="https://images.unsplash.com/photo-1765306552441-cd32bb216b0c?auto=format&fit=crop&w=1200&q=80"
           >
-            <div class="product-media">
+            <div class="product-media arrivals-media">
               <img
-                src="https://images.unsplash.com/photo-1506629905607-d9f6464ffa7a?auto=format&fit=crop&w=1200&q=80"
-                alt="Static Trousers"
+                src="https://images.unsplash.com/photo-1765306552441-cd32bb216b0c?auto=format&fit=crop&w=1200&q=80"
+                alt="Structured Coat"
                 loading="lazy"
               >
-              <div class="product-overlay">
-                <span>Tailoring</span>
-                <span>$270</span>
-              </div>
+              <div class="arrivals-hover"><span>View Details</span></div>
             </div>
-            <div class="product-meta">
-              <div>
-                <p class="product-category">Tailoring</p>
-                <h3>Static Trousers</h3>
-              </div>
-              <p>$270</p>
+            <div class="product-meta arrivals-meta">
+              <h3>Structured Coat</h3>
+              <p>$2,350</p>
             </div>
           </article>
+        </div>
+
+        <div class="arrivals-cta">
+          <a class="arrivals-button" href="collection.html">View All Products</a>
         </div>
       </section>
 
       <section
-        class="outro-section reveal-section story-section"
-        data-story-section="outro"
-        aria-labelledby="outro-title"
+        class="philosophy-section reveal-section story-section"
+        data-story-section="philosophy"
+        aria-labelledby="philosophy-title"
       >
-        <div class="outro-copy">
-          <h2 id="outro-title">A U S L I</h2>
-          <p class="outro-tagline">curated by instinct</p>
-          <p class="outro-statement">
-            Quiet objects selected for form, texture, and the confidence of restraint.
-          </p>
+        <div class="philosophy-inner">
+          <p class="section-label">Philosophy</p>
+          <div class="section-rule section-rule-centered" aria-hidden="true"></div>
+          <h2 id="philosophy-title" class="philosophy-quote">
+            Form follows instinct. Each piece is an exercise in reduction, distilled to its
+            essential gesture, carved from shadow.
+          </h2>
+          <p class="philosophy-signoff">AUSLI Studio / 2026</p>
+
+          <div class="philosophy-stats">
+            <div class="philosophy-stat">
+              <strong>100%</strong>
+              <span>Sustainable Materials</span>
+            </div>
+            <div class="philosophy-stat">
+              <strong>28</strong>
+              <span>Countries Delivered</span>
+            </div>
+            <div class="philosophy-stat">
+              <strong>15K+</strong>
+              <span>Curated Pieces</span>
+            </div>
+          </div>
         </div>
-        <nav class="outro-nav" aria-label="Footer">
-          <a href="#archive">Archive</a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="mailto:studio@ausli.com">Contact</a>
-        </nav>
       </section>
+
+      <footer
+        class="site-footer reveal-section story-section"
+        data-story-section="footer"
+        aria-labelledby="footer-brand"
+      >
+        <div class="footer-inner">
+          <div class="footer-columns">
+            <div class="footer-brand">
+              <h2 id="footer-brand">AUSLI</h2>
+              <p>
+                Sculptural minimalism.
+                <br>
+                Curated by instinct,
+                <br>
+                defined by form.
+              </p>
+            </div>
+
+            <div class="footer-column">
+              <h3>Shop</h3>
+              <a href="collection.html">New Arrivals</a>
+              <a href="collection.html">Outerwear</a>
+              <a href="collection.html">Essentials</a>
+              <a href="collection.html">Accessories</a>
+              <a href="collection.html">Archive Sale</a>
+            </div>
+
+            <div class="footer-column">
+              <h3>Information</h3>
+              <a href="about.html">About Us</a>
+              <a href="about.html">Sustainability</a>
+              <a href="about.html">Size Guide</a>
+              <a href="about.html">Shipping &amp; Returns</a>
+              <a href="mailto:studio@ausli.com">Contact</a>
+            </div>
+
+            <div class="footer-column footer-newsletter">
+              <h3>Newsletter</h3>
+              <p>Subscribe for editorial releases and archive access.</p>
+              <form class="footer-signup">
+                <input type="email" placeholder="Email address" aria-label="Email address">
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2026 AUSLI. All rights reserved.</p>
+            <div class="footer-links">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
+              <a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest</a>
+            </div>
+            <div class="footer-legal">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   </div>
 
