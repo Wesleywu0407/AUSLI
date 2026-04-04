@@ -31,6 +31,10 @@ const curatorSubmit = document.getElementById("curator-submit");
 const curatorStatus = document.getElementById("curator-status");
 const curatorResponse = document.getElementById("curator-response");
 const curatorChips = [...document.querySelectorAll(".curator-chip")];
+const collectionGrid = document.getElementById("collection-grid");
+const collectionCount = document.getElementById("collection-count");
+const filterChips = [...document.querySelectorAll(".filter-chip")];
+const sortSelect = document.getElementById("collection-sort");
 
 function usingDedicatedHero() {
   return (
@@ -519,6 +523,84 @@ function initOverlay() {
   });
 }
 
+function initCollectionControls() {
+  if (!collectionGrid || !productCards.length || !filterChips.length || !sortSelect) {
+    return;
+  }
+
+  const originalOrder = new Map(productCards.map((card, index) => [card, index]));
+  let activeFilter = "all";
+
+  function updateCount(visibleCards) {
+    if (!collectionCount) {
+      return;
+    }
+
+    const label = visibleCards === 1 ? "PIECE" : "PIECES";
+    collectionCount.textContent = `${visibleCards} ${label}`;
+  }
+
+  function sortCards(cards, mode) {
+    const sorted = [...cards];
+
+    sorted.sort((cardA, cardB) => {
+      if (mode === "price-asc") {
+        return Number(cardA.dataset.sortPrice) - Number(cardB.dataset.sortPrice);
+      }
+
+      if (mode === "price-desc") {
+        return Number(cardB.dataset.sortPrice) - Number(cardA.dataset.sortPrice);
+      }
+
+      if (mode === "name-asc") {
+        return cardA.dataset.name.localeCompare(cardB.dataset.name);
+      }
+
+      return originalOrder.get(cardA) - originalOrder.get(cardB);
+    });
+
+    return sorted;
+  }
+
+  function render() {
+    const visibleCards = productCards.filter((card) => (
+      activeFilter === "all" || card.dataset.category === activeFilter
+    ));
+
+    const sortedCards = sortCards(visibleCards, sortSelect.value);
+
+    productCards.forEach((card) => {
+      const isVisible = visibleCards.includes(card);
+      card.classList.toggle("is-hidden", !isVisible);
+      card.setAttribute("aria-hidden", String(!isVisible));
+      card.tabIndex = isVisible ? 0 : -1;
+    });
+
+    sortedCards.forEach((card) => {
+      collectionGrid.appendChild(card);
+    });
+
+    updateCount(visibleCards.length);
+  }
+
+  filterChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      activeFilter = chip.dataset.filter || "all";
+
+      filterChips.forEach((button) => {
+        const isActive = button === chip;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      render();
+    });
+  });
+
+  sortSelect.addEventListener("change", render);
+  render();
+}
+
 function initCursor() {
   if (!cursor || window.matchMedia("(max-width: 720px)").matches) {
     return;
@@ -974,16 +1056,25 @@ function initAnimations() {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.18 }
+    { threshold: 0.05 }
   );
 
-  revealSections.forEach((section) => observer.observe(section));
+  revealSections.forEach((section) => {
+    // If already in viewport on load, show immediately
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      section.classList.add("is-visible");
+    } else {
+      observer.observe(section);
+    }
+  });
 }
 
 if (!usingDedicatedHero()) {
   safeRun("hero scene", initHeroScene);
 }
 safeRun("overlay", initOverlay);
+safeRun("collection controls", initCollectionControls);
 safeRun("cursor", initCursor);
 safeRun("curator", initCurator);
 safeRun("animations", initAnimations);
